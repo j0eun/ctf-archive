@@ -1,0 +1,42 @@
+# run
+fxstat 파일의 정보를 얻는 함수
+st_size 총 파일크기(바이트)
+SLODWORD = Signed LO DWORD
+
+0번 파일디스크립터를 열음
+파일의 size만큼 힙에 할당
+buf = 힙에 할당된 주소, v6 = file_size
+
+sub_F0E(buf, file_size)
+파일의 첫 바이트부터 마지막 바이트까지
+32, 10, 9와 같으면 안된다. false 리턴
+조건문 다 통과하면 true 리턴
+
+v4 = 두번째 인자(file_name)
+
+
+sub_9C6(buf, file_size, input)
+buf[i * 4] = input[i]	// 반복문 input_len까지
+- result가 0을 리턴
+- input이 flag가 됨
+- 58글자면 exit code 1, 아니면 4
+
+
+0x9 0xa 0x20
+
+0x0909
+0x090A
+0x0920
+0x0A09
+0x0A0A
+0x0A20
+0x2009
+0x200A
+0x2020
+
+1 = 0x0A0A
+2 = 0x0A20 || 0x2009 || 0x200A || 0x2020   (? > 0x0A0A)
+3 = 0x090A
+4 = 0x0920 || 0x0A09   (? > 0x090A)
+5 = none
+6 = 0x0909
