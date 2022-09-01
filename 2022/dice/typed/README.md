@@ -1,0 +1,1 @@
+~~Haskell~~ Rust is a dynamically typed, interpreted language. Can you get my code to stop erroring?

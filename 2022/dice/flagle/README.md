@@ -1,0 +1,1 @@
+How hard could it be? Just guess the flag.
